@@ -3,22 +3,37 @@ fetch("data/destinations.json")
 .then((data) => {
     let sectionElm = document.querySelector("section")
 
-    let productCard = document.createElement("article")
-    productCard.classList.add("productCard")    
-
-    
+    let destinationInfo = document.createElement("div")
 
 
-    productCard.innerHTML = data.destinations.map((destination) => `
+    destinationInfo.innerHTML = data.destinations.map((destination) => `
 
-            <a href="destination.html?id=${destination.id}">
+            <h2>
+            ${destination.destination}
+            </h2>
+
+            <h1>
             ${destination.title}
-            </a>`).join("")
+            </h1>
 
-            <
+            <p>
+            ${destination.subtitle}
+            </p>
 
+            <p>
+            ${destination.text}
+            </p>
 
+            <h3>
+            Faciliteter
+            </h3>
 
-            sectionElm.append(productCard);
+            <li>
+            ${destination.facilities}
+            </li>
+
+            `).join("")
+
+            sectionElm.append(destinationInfo);
         })
     
