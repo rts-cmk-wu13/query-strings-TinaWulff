@@ -1,25 +1,25 @@
 
 fetch("data/destinations.json")
 .then(response => response.json())
-.then((data) => {
-    let sectionElm = document.querySelector("section")
+.then((data) => {  
 
-    let productCard = document.createElement("article")
-    productCard.classList.add("productCard")    
-
+    let sectionElm = document.createElement("section")
+    sectionElm.innerHTML = "<h1>Apartments for rent</h1>";
     
-    productCard.innerHTML = data.destinations.map((destination) => `
+    sectionElm.innerHTML += data.destinations.map((destination) => `
 
             
+            <article class="productCard">
             <img src="/img/${destination.image}" alt="${destination.subtitle}">
             <i class="fa-regular fa-heart"></i>
              <a href="destination.html?id=${destination.id}">More  
-            </a>`
+            </a>
+            </article>`
             ).join("")
 
 
 
-            sectionElm.append(productCard);
+            document.querySelector("#wrapper").append(sectionElm);
         })
     
         

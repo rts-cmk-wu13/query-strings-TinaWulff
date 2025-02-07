@@ -126,8 +126,6 @@ fetch(`/data/${id}.json`)
     `
 
     sectionElm.append(destinationInfo);
-   
-
 
     let destinationImage = document.createElement("div");
 
