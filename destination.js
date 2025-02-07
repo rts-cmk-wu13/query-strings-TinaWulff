@@ -1,4 +1,3 @@
-
 fetch("data/destinations.json")
 .then(response => response.json())
 .then((data) => {
@@ -8,18 +7,18 @@ fetch("data/destinations.json")
     productCard.classList.add("productCard")    
 
     
+
+
     productCard.innerHTML = data.destinations.map((destination) => `
 
-             <a href="destination.html?id=${destination.id}">
-            <img src="/img/${destination.image}" alt="${destination.subtitle}">
-            <i class="fa-regular fa-heart"></i>
-            More  
-            </a>`
-            ).join("")
+            <a href="destination.html?id=${destination.id}">
+            ${destination.title}
+            </a>`).join("")
+
+            <
 
 
 
             sectionElm.append(productCard);
         })
     
-        
