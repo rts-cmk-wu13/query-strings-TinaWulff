@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    font-family: "inter", sans-serif;
+
+    max-width: 100%;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+h2 {
+font-size: 1.25em;
+text-transform: uppercase;
+text-align: center;
+font-weight: 300;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+li {
+    margin-left: 1em;
+   
+}
+
+
+/* img {
+    width: 100%;
+    max-width: 100%;
+} */
+
+section {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    column-gap: 3em;
+
+}
+
+.destination__info {
+grid-area: 1/2/1/-2;
+width: 100%;
+max-width: 30em;
+align-self: center;
+display: flex;
+flex-direction: column;
+gap: 2em;
+
+}
+
+.destination__img {
+grid-column: 1/1/1/-2;
+width: 100%;
+/* max-width: 44.5em;
+height: 52em;
+object-fit: cover; */
+
+}
+
+.destination__img img{
+    max-width: 44.5em;
+    height: 52em;
+    object-fit: cover;
+}
