@@ -94,6 +94,7 @@ fetch(`/data/${id}.json`)
             // Find section elementet og opret destination info
             let sectionElm = document.querySelector("section");
             let destinationInfo = document.createElement("div");
+            destinationInfo.classList.add("destination__info");
 
             // Indsæt destinationens information i destinationInfo
             destinationInfo.innerHTML = 
@@ -128,6 +129,7 @@ fetch(`/data/${id}.json`)
     sectionElm.append(destinationInfo);
 
     let destinationImage = document.createElement("div");
+    destinationImage.classList.add("destination__img");
 
     destinationImage.innerHTML = `
 
