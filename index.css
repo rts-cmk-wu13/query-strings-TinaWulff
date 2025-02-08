@@ -1,23 +1,65 @@
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    justify-self: center;
+    margin-top: 4em;
+}
+
+body {
+    font-family: "inter", sans-serif;
+    font-size: 16px;
+}
+
+#wrapper {
+    max-width: 100%;
+    width: 100%;
 }
 
 section h1 {
     grid-column: span 4;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+
+.productCard {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 22.5em;
+    background-color: #aec2c5;
 }
 
 .productCard img {
 max-width: 100%;
-height: 288px;
+width: 18em;
+height: 18em;
 object-fit: cover;
 /* width: 100%; */
+grid-column: span 2;
 
 }
 
-.productCard {
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
+.productCard a {
+    justify-self: end;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    margin-right: 2em;
+}
 
+.productCard i {
+    margin-left: 1em;
 }
