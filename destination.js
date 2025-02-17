@@ -115,11 +115,7 @@ fetch(`/data/${id}.json`)
     ${data.text}
     </p>
 
-    <h3>
-    Faciliteter
-    </h3>
-
-    <ul>
+    <ul>Faciliteter
     ${data.facilities.map(facility =>
         `<li>${facility}</li>`
     ).join("")}
@@ -135,7 +131,7 @@ fetch(`/data/${id}.json`)
 
     <img src="/img/${data.image}" alt="${data.subtitle}">
 
-    <button><i class="fa-solid fa-heart"></i>FAVORIT</button>
+    <a><i class="fa-solid fa-heart"></i>FAVORIT</a>
   `
     sectionElm.append(destinationImage);
 
