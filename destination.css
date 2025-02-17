@@ -45,6 +45,7 @@ li {
     margin-top: 0.8em;
     margin-left: 1em;
    font-weight: 400;
+   font-size: 16px;
 }
 
 li:first-of-type {
@@ -105,8 +106,12 @@ object-fit: cover; */
     margin-right: 1em;
 }
 
+.destination__img a:hover {
+cursor: pointer;
+}
 
 .destination__img i {
     padding-right: 1em;
     scale: 1.5;
 }
+
