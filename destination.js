@@ -99,21 +99,13 @@ fetch(`/data/${id}.json`)
             // Indsæt destinationens information i destinationInfo
             destinationInfo.innerHTML = 
     `
-    <h2>
-    ${data.destination}
-    </h2>
+    <h2>${data.destination}</h2>
 
-    <h1>
-    ${data.title}
-    </h1>
+    <h1>${data.title}</h1>
 
-    <p>
-    ${data.subtitle}
-    </p>
+    <p>${data.subtitle}</p>
 
-    <p>
-    ${data.text}
-    </p>
+    <p>${data.text}</p>
 
     <ul>Faciliteter
     ${data.facilities.map(facility =>
@@ -134,7 +126,7 @@ fetch(`/data/${id}.json`)
 
     <img src="/img/${data.image}" alt="${data.subtitle}">
 
-    <button><i class="fa-solid fa-heart"></i>FAVORIT</button>
+    <button><i class="fa-regular fa-heart"></i>FAVORIT</button>
   `
     sectionElm.append(destinationImage);
 
