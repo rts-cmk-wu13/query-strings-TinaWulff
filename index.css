@@ -61,5 +61,17 @@ grid-column: span 2;
 }
 
 .productCard i {
-    margin-left: 1em;
+    margin-left: 1.5em;
+    scale: 1.5;
+}
+
+button {
+    justify-self: flex-start;
+    background-color: #00000000;
+    border: none;
+    height: min-content;
+}
+
+.favorite_btn--selected {
+    
 }

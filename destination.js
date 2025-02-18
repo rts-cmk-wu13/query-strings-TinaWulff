@@ -73,6 +73,8 @@ fetch("data/destinations.json")
 */
 
 
+// RIGTIGE UDGAVE HERUNDER
+
 
 
 let search = window.location.search
@@ -88,8 +90,6 @@ fetch(`/data/${id}.json`)
         
         console.log(data)
         // let destination = data.find(destination => destination.id === parseInt(id));
-        
-
         
             // Find section elementet og opret destination info
             let sectionElm = document.querySelector("section");
@@ -127,18 +127,16 @@ fetch(`/data/${id}.json`)
     let destinationImage = document.createElement("div");
     destinationImage.classList.add("destination__img");
 
+    // Tilføj kode til favorit funktion og localstorage på nedenstående herfra,
+    // fuld færdig version indsat under denne kodesnippet.
+
     destinationImage.innerHTML = `
 
     <img src="/img/${data.image}" alt="${data.subtitle}">
 
-    <a><i class="fa-solid fa-heart"></i>FAVORIT</a>
+    <button><i class="fa-solid fa-heart"></i>FAVORIT</button>
   `
     sectionElm.append(destinationImage);
 
 })
 
-
-
-
-
-.catch(error => console.error("Error fetching data:", error));

@@ -98,15 +98,18 @@ object-fit: cover; */
     object-fit: cover;
 }
 
-.destination__img a {
+.destination__img button {
     grid-area: 1/1/2/-1;
     z-index: 1;
     justify-self: flex-end;
     margin-top: 1em;
     margin-right: 1em;
+    background-color: #00000000;
+    border: none;
+    height: min-content;
 }
 
-.destination__img a:hover {
+.destination__img button:hover {
 cursor: pointer;
 }
 
