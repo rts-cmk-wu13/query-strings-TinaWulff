@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dark-mode="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="localStorage.js" defer></script>
-    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/4ff63336a6.js" crossorigin="anonymous"></script>
+
+    <script src="localStorage.js" defer></script>
+    <script src="darkMode.js" defer></script>
+    <script src="script.js" defer></script>
+    
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="darkmode.css">
 </head>
 <body>
     <div id="wrapper">
+
+        <div class="switch-container">
+            <p> Dark Mode</p>
+            <label class="switch">
+                <input type="checkbox" id="switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
 
     </div>
     

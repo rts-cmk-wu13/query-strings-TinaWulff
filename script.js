@@ -11,9 +11,10 @@ fetch("data/destinations.json")
     let sectionElm = document.createElement("section")
     sectionElm.innerHTML = "<h1>Apartments for rent</h1>";
     //console.log(sectionElm)
+
     sectionElm.innerHTML += data.destinations.map((destination) => `
 
-            
+    
             <article class="productCard">
             <img src="/img/${destination.image}" alt="${destination.subtitle}">
             <button class="favorite_btn ${favorites.includes(destination.id.toString()) ? "favorite_btn--selected" : "" }" data-favid="${destination.id}">
