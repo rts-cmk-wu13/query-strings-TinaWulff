@@ -12,7 +12,7 @@
 section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    gap: 1.8em;
     justify-self: center;
     margin-top: 4em;
 }
@@ -33,12 +33,16 @@ section h1 {
     font-weight: 600;
 }
 
+article {
+border-radius: 15px;
+}
 
 .productCard {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     height: 22.5em;
     background-color: #aec2c5;
+    border-radius: 15px;
 }
 
 .productCard img {
@@ -60,6 +64,18 @@ grid-column: span 2;
     margin-right: 2em;
 }
 
+.productCard:hover {
+    scale: 1.1;
+}
+
+
+.productCard a:hover {
+cursor: pointer;
+font-weight: bold;
+font-size: 16px;
+
+}
+
 .productCard i {
     margin-left: 1.5em;
     scale: 1.5;
@@ -73,5 +89,7 @@ button {
 }
 
 .favorite_btn--selected {
-    
+    color: red;
+    scale: 1.5;
+ 
 }

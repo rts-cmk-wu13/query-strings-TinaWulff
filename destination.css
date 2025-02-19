@@ -118,3 +118,6 @@ cursor: pointer;
     scale: 1.5;
 }
 
+.favorite_btn--selected {
+    color: red;
+}

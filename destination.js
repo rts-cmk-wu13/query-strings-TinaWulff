@@ -74,7 +74,8 @@ fetch("data/destinations.json")
 
 
 // RIGTIGE UDGAVE HERUNDER
-
+let favorites = readFromLocalStorage("favorites") || [];
+if (!Array.isArray(favorites)) favorites = [];
 
 
 let search = window.location.search
@@ -119,16 +120,38 @@ fetch(`/data/${id}.json`)
     let destinationImage = document.createElement("div");
     destinationImage.classList.add("destination__img");
 
-    // Tilføj kode til favorit funktion og localstorage på nedenstående herfra,
-    // fuld færdig version indsat under denne kodesnippet.
+    //
+    let isFavorite = favorites.includes(id);
+
 
     destinationImage.innerHTML = `
 
     <img src="/img/${data.image}" alt="${data.subtitle}">
 
-    <button><i class="fa-regular fa-heart"></i>FAVORIT</button>
+    <button class="favorite_btn ${isFavorite ? "favorite_btn--selected" : ""}" data-favid="${id}">
+        <i class="fa-solid fa-heart"></i>FAVORIT
+    </button>
   `
     sectionElm.append(destinationImage);
 
+
+        // **Tilføj favoritknap event listener**
+        let favButton = destinationImage.querySelector(".favorite_btn");
+
+        favButton.addEventListener("click", function () {
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(favId => favId !== id);
+                favButton.classList.remove("favorite_btn--selected");
+            } else {
+                favorites.push(id);
+                favButton.classList.add("favorite_btn--selected");
+            }
+            saveToLocalStorage("favorites", favorites);
+        });
+
 })
+
+
+
+
 
